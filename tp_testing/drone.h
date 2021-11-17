@@ -37,9 +37,9 @@ class Drone {
         virtual ~Drone();
         
         int despegar();
-        void aterrizar();
-        void notificar();
-        void descargarPaquete();
+        int aterrizar();
+        int notificar();
+        int descargarPaquete();
         void setAccion(IDroneMovimiento* m);
         void doAccion()const;
             

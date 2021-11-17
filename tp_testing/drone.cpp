@@ -23,7 +23,7 @@ int Drone::despegar()
     notificar();
     return 0;
 }
-void Drone::aterrizar()
+int Drone::aterrizar()
 {
     std::cout << "dron aterrizando..\n";
     setAccion(new Bajar);
@@ -33,16 +33,19 @@ void Drone::aterrizar()
     descargarPaquete();
     std::cout << "..%..%..%..%..%..%..%..\n";
     std::cout << "..%..%..%..%..%..%..%..\n";
-    
+
+    return 1;
     
 }
-void Drone::notificar()
+int Drone::notificar()
 {
     std::cout << "Se entrego el paquete #" << _paquete.getId() << " .\n";
+    return 0;
 }
-void Drone::descargarPaquete()
+int Drone::descargarPaquete()
 {
     std::cout << "Descargando paquete....\n";
+    return 0;
 }
 void Drone::setAccion(IDroneMovimiento* m){
     delete this->_mov;
